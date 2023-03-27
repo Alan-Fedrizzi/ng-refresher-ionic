@@ -8,9 +8,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CharactersComponent } from './characters.component/characters.component';
+import { BudgetComponent } from './budget.component/budget.component';
+import { CoursesComponent } from './courses.component/courses.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, CharactersComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    CharactersComponent,
+    BudgetComponent,
+    CoursesComponent,
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
