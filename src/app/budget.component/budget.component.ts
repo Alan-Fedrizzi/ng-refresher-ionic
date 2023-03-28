@@ -19,15 +19,23 @@ export class BudgetComponent {
     this.enteredAmount = '';
   }
 
+  async presentAlert() {
+    const alert = document.createElement('ion-alert');
+    alert.header = 'Invalid Inputs!';
+    alert.message = 'Please enter a valid reason and amount.';
+    alert.buttons = ['OK'];
+
+    document.body.appendChild(alert);
+    await alert.present();
+  }
+
   onAddExpense() {
     if (!this.enteredReason || !this.enteredAmount) {
-      // TODO create alert!!!
-      console.log('Please enter a valid reason and amount!');
+      this.presentAlert();
       return;
     }
     if (this.enteredReason.trim().length <= 0 || +this.enteredAmount <= 0) {
-      // TODO create alert!!!
-      console.log('Please enter a valid reason and amount!');
+      this.presentAlert();
       return;
     }
     const n = +this.enteredAmount;
