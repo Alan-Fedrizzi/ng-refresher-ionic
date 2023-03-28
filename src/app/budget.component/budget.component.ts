@@ -36,4 +36,10 @@ export class BudgetComponent {
     this.totalAmountText = this.totalAmountNumber.toFixed(2);
     this.onClearInputs();
   }
+
+  onRemoveExpense(i: number) {
+    this.totalAmountNumber -= +this.expenseList[i].amount;
+    this.totalAmountText = this.totalAmountNumber.toFixed(2);
+    this.expenseList.splice(i, 1);
+  }
 }
