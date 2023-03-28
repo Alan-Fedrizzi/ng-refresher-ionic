@@ -1,3 +1,7 @@
 .item-total {
   --border-radius: 4px;
+
+  &__span {
+    font-weight: 600;
+  }
 }

@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class BudgetComponent {
   enteredReason: string;
   enteredAmount: string;
+  totalAmountText: string;
+  totalAmountNumber = 0;
+  expenseList: { reason: string; amount: string }[] = [];
 
   constructor() {}
 
@@ -27,6 +30,10 @@ export class BudgetComponent {
       console.log('Please enter a valid reason and amount!');
       return;
     }
-    console.log('Valid!!!');
+    const n = +this.enteredAmount;
+    this.expenseList.push({ reason: this.enteredReason, amount: n.toFixed(2) });
+    this.totalAmountNumber += n;
+    this.totalAmountText = this.totalAmountNumber.toFixed(2);
+    this.onClearInputs();
   }
 }
