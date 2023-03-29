@@ -1,7 +1,7 @@
 <ion-grid class="courses">
   <ion-row>
     <ion-col size-md="6" offset-md="3">
-      <ion-card>
+      <ion-card class="ion-no-margin">
         <ion-card-header>
           <ion-card-title>My Courses</ion-card-title>
         </ion-card-header>
@@ -34,7 +34,7 @@
         <ion-item
           *ngFor="let course of courseList; let i = index"
           (click)="onRemoveCourse(i)"
-          class="courses__item"
+          class="courses__item ion-no-margin"
         >
           <span class="courses__span">{{ course.name }}</span> &nbsp; -
           {{ course.rating }} /5

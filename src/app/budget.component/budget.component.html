@@ -1,7 +1,7 @@
 <ion-grid class="budget">
   <ion-row>
     <ion-col size-md="6" offset-md="3">
-      <ion-card>
+      <ion-card class="ion-no-margin">
         <ion-card-header>
           <ion-card-title>New Expense</ion-card-title>
         </ion-card-header>
@@ -32,7 +32,7 @@
     <ion-col size-md="6" offset-md="3">
       <ion-list>
         <ion-item
-          class="budget__item"
+          class="ion-no-margin budget__item"
           *ngFor="let expense of expenseList; let i = index"
           (click)="onRemoveExpense(i)"
         >
@@ -43,7 +43,7 @@
   </ion-row>
   <ion-row>
     <ion-col size-md="6" offset-md="3">
-      <ion-item color="danger" class="ion-margin budget__total-item">
+      <ion-item color="danger" class="ion-no-margin budget__total-item">
         <ion-label
           >Total Expenses:
           <span class="budget__total-span">$ {{ totalAmountText }} </span>
