@@ -32,7 +32,8 @@
     <ion-col size-md="6" offset-md="3">
       <ion-list>
         <ion-item
-          class="ion-no-margin budget__item"
+          class="ion-no-margin"
+          button
           *ngFor="let expense of expenseList; let i = index"
           (click)="onRemoveExpense(i)"
         >

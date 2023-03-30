@@ -15,7 +15,7 @@
           ></ion-spinner>
           <ion-list *ngIf="!isFetching">
             <ion-item
-              class="character__item"
+              button
               *ngFor="let person of personList"
               (click)="onRemovePerson(person)"
             >

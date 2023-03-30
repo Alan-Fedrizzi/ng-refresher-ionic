@@ -1,10 +1,8 @@
 .budget {
-  &__item {
-    cursor: pointer;
-  }
   &__total-item {
     --border-radius: 4px;
   }
+
   &__total-span {
     font-weight: 600;
   }

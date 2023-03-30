@@ -32,9 +32,10 @@
     <ion-col size-md="6" offset-md="3">
       <ion-list>
         <ion-item
+          class="ion-no-margin"
+          button
           *ngFor="let course of courseList; let i = index"
           (click)="onRemoveCourse(i)"
-          class="courses__item ion-no-margin"
         >
           <span class="courses__span">{{ course.name }}</span> &nbsp; -
           {{ course.rating }} /5
